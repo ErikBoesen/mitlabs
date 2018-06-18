@@ -1,0 +1,31 @@
+ServerHost = localhost
+ServerPort = 9000
+Community = alpha
+
+ProcessConfig = ANTLER
+{
+    MSBetweenLaunches = 200
+   
+    Run = MOOSDB @ NewConsole = false
+    Run = uXMS @ NewConsole = false
+    Run = uTimerScript @ NewConsole = false
+}
+
+ProcessConfig = uXMS
+{
+    AppTick = 4
+    CommsTick = 4
+
+    VAR = DB_CLIENTS, DB_UPTIME, DB_TIME
+    DISPLAY_SOURCE = true
+    DISPLAY_TIME = true
+    COLOR_MAP = DB_CLIENTS, red
+}
+
+ProcessConfig = uTimerScript
+{
+    event = var=DEPLOY, val=true, time=1
+    event = var=TEST, val=30, time=2
+
+    reset_max = nolimit
+}
