@@ -1,2 +1,3 @@
 #!/bin/bash
-g++ $1.cpp -o $1.out && ./$1.out
+name="$1"
+g++ $name.cpp -o $name.out && ./$name.out
