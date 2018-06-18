@@ -17,6 +17,6 @@ private:
 int main(int argc, char *argv[]) {
     if (argc < 2) return 1;
     std::cout << "argc: " << argc << std::endl;
-    Rectangle r((int)argc, atoi(argv[1]));
+    Rectangle r(argc, atoi(argv[1]));
     std::cout << r.getPerimeter() << std::endl;
 }
