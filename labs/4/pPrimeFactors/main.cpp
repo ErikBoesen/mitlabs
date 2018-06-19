@@ -1,8 +1,8 @@
 /************************************************************/
-/*    NAME: Erik Boesen                                              */
-/*    ORGN: MIT                                             */
+/*    NAME: Erik Boesen                                     */
+/*    ORGN: MIT Marine Autonomy Lab                         */
 /*    FILE: main.cpp                                        */
-/*    DATE:                                                 */
+/*    DATE: 2018-06-19                                      */
 /************************************************************/
 
 #include <string>
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     else if(i==2)
       run_command = argi;
   }
-  
+
   if(mission_file == "")
     showHelpAndExit();
 
@@ -46,7 +46,6 @@ int main(int argc, char *argv[])
   PrimeFactors PrimeFactors;
 
   PrimeFactors.Run(run_command.c_str(), mission_file.c_str());
-  
+
   return(0);
 }
-

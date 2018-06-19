@@ -1,6 +1,6 @@
 #--------------------------------------------------------
-# The CMakeLists.txt for:                       pPrimeFactors
-# Author(s):                              Erik Boesen
+# The CMakeLists.txt for:                   pPrimeFactors
+# Author(s):                                  Erik Boesen
 #--------------------------------------------------------
 
 SET(SRC
@@ -16,4 +16,3 @@ TARGET_LINK_LIBRARIES(pPrimeFactors
    mbutil
    m
    pthread)
-

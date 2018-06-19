@@ -1,8 +1,8 @@
 /************************************************************/
-/*    NAME: Erik Boesen                                              */
-/*    ORGN: MIT                                             */
-/*    FILE: PrimeFactors.cpp                                        */
-/*    DATE:                                                 */
+/*    NAME: Erik Boesen                                     */
+/*    ORGN: MIT Marine Autonomy Lab                         */
+/*    FILE: PrimeFactors.cpp                                */
+/*    DATE: 2018-06-19                                      */
 /************************************************************/
 
 #include <iterator>
@@ -31,7 +31,7 @@ PrimeFactors::~PrimeFactors()
 bool PrimeFactors::OnNewMail(MOOSMSG_LIST &NewMail)
 {
   MOOSMSG_LIST::iterator p;
-   
+
   for(p=NewMail.begin(); p!=NewMail.end(); p++) {
     CMOOSMsg &msg = *p;
 
@@ -39,14 +39,14 @@ bool PrimeFactors::OnNewMail(MOOSMSG_LIST &NewMail)
     string key   = msg.GetKey();
     string comm  = msg.GetCommunity();
     double dval  = msg.GetDouble();
-    string sval  = msg.GetString(); 
+    string sval  = msg.GetString();
     string msrc  = msg.GetSource();
     double mtime = msg.GetTime();
     bool   mdbl  = msg.IsDouble();
     bool   mstr  = msg.IsString();
 #endif
    }
-	
+
    return(true);
 }
 
@@ -59,7 +59,7 @@ bool PrimeFactors::OnConnectToServer()
    // possibly look at the mission file?
    // m_MissionReader.GetConfigurationParam("Name", <string>);
    // m_Comms.Register("VARNAME", 0);
-	
+
    RegisterVariables();
    return(true);
 }
@@ -87,7 +87,7 @@ bool PrimeFactors::OnStartUp()
       string original_line = *p;
       string param = stripBlankEnds(toupper(biteString(*p, '=')));
       string value = stripBlankEnds(*p);
-      
+
       if(param == "FOO") {
         //handled
       }
@@ -96,8 +96,8 @@ bool PrimeFactors::OnStartUp()
       }
     }
   }
-  
-  RegisterVariables();	
+
+  RegisterVariables();
   return(true);
 }
 
@@ -108,4 +108,3 @@ void PrimeFactors::RegisterVariables()
 {
   // Register("FOOBAR", 0);
 }
-

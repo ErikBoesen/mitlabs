@@ -1,9 +1,9 @@
-/****************************************************************/
-/*   NAME: Erik Boesen                                             */
-/*   ORGN: MIT Cambridge MA                                     */
-/*   FILE: PrimeFactors_Info.cpp                               */
-/*   DATE: Dec 29th 1963                                        */
-/****************************************************************/
+/************************************************************/
+/*    NAME: Erik Boesen                                     */
+/*    ORGN: MIT Marine Autonomy Lab                         */
+/*    FILE: PrimeFactors_Info.cpp                           */
+/*    DATE: 2018-06-19                                      */
+/************************************************************/
 
 #include <cstdlib>
 #include <iostream>
@@ -112,4 +112,3 @@ void showReleaseInfoAndExit()
   showReleaseInfo("pPrimeFactors", "gpl");
   exit(0);
 }
-

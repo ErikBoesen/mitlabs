@@ -1,8 +1,8 @@
 /************************************************************/
-/*    NAME: Erik Boesen                                              */
-/*    ORGN: MIT                                             */
-/*    FILE: PrimeFactors.h                                          */
-/*    DATE:                                                 */
+/*    NAME: Erik Boesen                                     */
+/*    ORGN: MIT Marine Autonomy Lab                         */
+/*    FILE: PrimeFactors.h                                  */
+/*    DATE: 2018-06-19                                      */
 /************************************************************/
 
 #ifndef PrimeFactors_HEADER
@@ -16,7 +16,7 @@ class PrimeFactors : public CMOOSApp
    PrimeFactors();
    ~PrimeFactors();
 
- protected: // Standard MOOSApp functions to overload  
+ protected: // Standard MOOSApp functions to overload
    bool OnNewMail(MOOSMSG_LIST &NewMail);
    bool Iterate();
    bool OnConnectToServer();
@@ -30,4 +30,4 @@ class PrimeFactors : public CMOOSApp
  private: // State variables
 };
 
-#endif 
+#endif
