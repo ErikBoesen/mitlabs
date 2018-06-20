@@ -5,7 +5,7 @@
 #include <sstream>
 using namespace std;
 
-vector<uint64_t> prime_factors(int x) {
+vector<uint64_t> prime_factors(uint64_t x) {
     vector<uint64_t> factors;
 
     for (int n = 2; n <= sqrt(x); n++) {
@@ -31,6 +31,6 @@ int main(int argc, char *argv[]) {
         cerr << "Invalid number of arguments!" << endl;
         exit(1);
     }
-    uint64_t input = atoi(argv[1]);
+    uint64_t input = strtoull(argv[1], NULL, 0);
     cout << vrepr(prime_factors(input)) << endl;
 }
