@@ -5,24 +5,20 @@
 #include <sstream>
 using namespace std;
 
-vector<uint64_t> prime_factors(int x) {
-    vector<uint64_t> factors;
+string prime_factors(int x) {
+    stringstream ss;
 
+    // TODO: This is a hack and is bad
+    bool first = true;
     for (int n = 2; n <= sqrt(x); n++) {
         while (x % n == 0) {
-            factors.push_back(n);
+            if (first) first = false;
+            else ss << ':';
+            ss << n;
             x /= n;
         }
     }
-    if (x > 2) factors.push_back(x);
-    return factors;
-}
-
-string vrepr(vector<uint64_t> v) {
-    stringstream ss;
-    ss << v[0];
-    for (int i = 1; i < v.size(); i++)
-        ss << ':' << v[i];
+    if (x > 2) ss << ':' << x;
     return ss.str();
 }
 
@@ -32,5 +28,5 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
     uint64_t input = atoi(argv[1]);
-    cout << vrepr(prime_factors(input)) << endl;
+    cout << prime_factors(input) << endl;
 }
