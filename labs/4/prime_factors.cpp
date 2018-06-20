@@ -5,12 +5,12 @@
 #include <sstream>
 using namespace std;
 
-string prime_factors(int x) {
+string prime_factors(uint64_t x) {
     stringstream ss;
 
     // TODO: This is a hack and is bad
     bool first = true;
-    for (int n = 2; n <= sqrt(x); n++) {
+    for (uint64_t n = 2; n <= sqrt(x); n++) {
         while (x % n == 0) {
             if (first) first = false;
             else ss << ':';
@@ -27,6 +27,6 @@ int main(int argc, char *argv[]) {
         cerr << "Invalid number of arguments!" << endl;
         exit(1);
     }
-    uint64_t input = atoi(argv[1]);
+    uint64_t input = strtoull(argv[1], NULL, 0);
     cout << prime_factors(input) << endl;
 }
