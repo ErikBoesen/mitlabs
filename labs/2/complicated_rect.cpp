@@ -9,8 +9,8 @@ public:
     }
     void setWidth(T width) { this->width = width; }
     void setHeight(T height) { this->height = height; }
-    int getArea() { return this->width * this->height; }
-    int getPerimeter() { return 2*(this->width + this->height); }
+    int getArea() const { return this->width * this->height; }
+    int getPerimeter() const { return 2*(this->width + this->height); }
 private:
     T width, height;
 };
